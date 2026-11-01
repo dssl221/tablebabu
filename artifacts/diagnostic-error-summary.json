@@ -1,0 +1,24 @@
+{
+  "failedAttempts": 925,
+  "postgresCodes": {
+    "40001": 925
+  },
+  "prismaCodes": {
+    "P2010": 925
+  },
+  "stages": {
+    "counter-allocation": 925
+  },
+  "attemptDistribution": {
+    "0": 239,
+    "1": 173,
+    "2": 142,
+    "3": 109,
+    "4": 90,
+    "5": 71,
+    "6": 49,
+    "7": 34,
+    "8": 18
+  },
+  "exhaustedRequests": 18
+}

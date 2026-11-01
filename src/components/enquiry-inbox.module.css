@@ -1,0 +1,134 @@
+.filters {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  background: #fff;
+  border: 1px solid #e0e5dc;
+  border-radius: 12px;
+  padding: 20px;
+}
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.filters label:first-child {
+  flex: 1;
+}
+.filters input,
+.filters select,
+.actions select {
+  padding: 12px;
+  border: 1px solid #ced7ca;
+  border-radius: 8px;
+  width: 100%;
+  min-width: 0;
+  background: #fff;
+  color: #244b3d;
+  font: inherit;
+}
+.list {
+  display: grid;
+  gap: 20px;
+}
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 32px;
+  padding: 28px;
+}
+.title {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.title h2 {
+  font-size: 23px;
+  margin: 0;
+}
+.title span {
+  font-size: 12px;
+  text-transform: capitalize;
+  background: #edf2e7;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+.details {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.contact {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.contact a {
+  text-decoration: underline;
+}
+.message {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  background: #f8f9f5;
+  padding: 16px;
+  border-radius: 8px;
+}
+.details small,
+.actions small {
+  color: #6b776c;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.details details {
+  margin-top: 18px;
+}
+.details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.details li p {
+  margin-bottom: 4px;
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-left: 1px solid #e2e7dc;
+  padding-left: 26px;
+  min-width: 0;
+}
+.actions > p {
+  margin: 0;
+  line-height: 1.7;
+}
+.actions label {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.statusActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+@media (max-width: 760px) {
+  .card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .actions {
+    border-left: 0;
+    border-top: 1px solid #e2e7dc;
+    padding: 20px 0 0;
+  }
+  .filters {
+    flex-wrap: wrap;
+  }
+  .filters label:first-child {
+    flex-basis: 100%;
+  }
+}

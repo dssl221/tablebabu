@@ -1,0 +1,72 @@
+{
+  "name": "tablebabu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "prisma generate && next build",
+    "start": "cross-env NODE_ENV=production tsx server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:local": "tsx scripts/local-db.ts",
+    "restaurant:create": "tsx scripts/create-restaurant.ts",
+    "format": "prettier --write src server.ts prisma scripts tests *.ts *.json",
+    "admin:create": "tsx scripts/create-platform-admin.ts",
+    "test:stress": "tsx scripts/stress-test.ts",
+    "test:stress:platform": "tsx scripts/stress-platform.ts"
+  },
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
+    "cookie": "^2.0.1",
+    "cross-env": "^10.1.0",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "lucide-react": "^1.51.0",
+    "multer": "^2.4.0",
+    "next": "^16.3.8",
+    "pdfkit": "^0.20.2",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sharp": "^0.35.5",
+    "socket.io": "^4.8.4",
+    "socket.io-client": "^4.8.4",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/cookie": "^0.6.0",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^26.6.4",
+    "@types/pdfkit": "^0.17.6",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "embedded-postgres": "^18.4.0-beta.17",
+    "prettier": "^3.9.9",
+    "prisma": "^6.19.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "overrides": {
+    "deepmerge-ts": "^8.0.0"
+  }
+}

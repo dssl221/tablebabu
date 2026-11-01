@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "images": 3
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "images": 3
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "images": 3
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "images": 3
+    }
+  ],
+  "faq": true,
+  "noJavaScriptFaq": true,
+  "signup": true,
+  "login": true,
+  "robots": "index, follow",
+  "errors": []
+}

@@ -1,0 +1,527 @@
+{
+  "capturedAt": "2026-10-06T13:00:36.843Z",
+  "restaurants": [
+    {
+      "id": "cmuwofxdq0002n60kek0nlrlk",
+      "slug": "platform-stress-c58d6244-0",
+      "orderCode": "HCE"
+    },
+    {
+      "id": "cmuwog102000pn60kgnvw8t7a",
+      "slug": "platform-stress-c58d6244-1",
+      "orderCode": "HCF"
+    },
+    {
+      "id": "cmuwog11q001cn60kxs7gfsuw",
+      "slug": "platform-stress-c58d6244-2",
+      "orderCode": "HD0"
+    },
+    {
+      "id": "cmuwog13a001zn60kk0uy41lz",
+      "slug": "platform-stress-c58d6244-3",
+      "orderCode": "HD1"
+    },
+    {
+      "id": "cmuwog14u002mn60klvmp10cn",
+      "slug": "platform-stress-c58d6244-4",
+      "orderCode": "HD2"
+    },
+    {
+      "id": "cmuwog1680039n60klq0lmckv",
+      "slug": "platform-stress-c58d6244-5",
+      "orderCode": "HD3"
+    },
+    {
+      "id": "cmuwog17l003wn60kbcxxlz7f",
+      "slug": "platform-stress-c58d6244-6",
+      "orderCode": "HD4"
+    },
+    {
+      "id": "cmuwog194004jn60k6dq3jdyx",
+      "slug": "platform-stress-c58d6244-7",
+      "orderCode": "HD5"
+    },
+    {
+      "id": "cmuwog1ah0056n60k74svrlx4",
+      "slug": "platform-stress-c58d6244-8",
+      "orderCode": "HD6"
+    },
+    {
+      "id": "cmuwog1bq005tn60k98a8poto",
+      "slug": "platform-stress-c58d6244-9",
+      "orderCode": "HD7"
+    },
+    {
+      "id": "cmuwog1df006gn60k7siedu4d",
+      "slug": "platform-stress-c58d6244-10",
+      "orderCode": "HD8"
+    },
+    {
+      "id": "cmuwog1eu0073n60kq1bqlj6u",
+      "slug": "platform-stress-c58d6244-11",
+      "orderCode": "HD9"
+    },
+    {
+      "id": "cmuwog1g6007qn60kjexfoq9k",
+      "slug": "platform-stress-c58d6244-12",
+      "orderCode": "HDA"
+    },
+    {
+      "id": "cmuwog1hg008dn60ks4ikexi2",
+      "slug": "platform-stress-c58d6244-13",
+      "orderCode": "HDB"
+    },
+    {
+      "id": "cmuwog1iq0090n60kwagvqrzk",
+      "slug": "platform-stress-c58d6244-14",
+      "orderCode": "HDC"
+    },
+    {
+      "id": "cmuwog1k5009nn60km95arwu3",
+      "slug": "platform-stress-c58d6244-15",
+      "orderCode": "HDD"
+    },
+    {
+      "id": "cmuwog1le00aan60khloe0z8m",
+      "slug": "platform-stress-c58d6244-16",
+      "orderCode": "HDE"
+    },
+    {
+      "id": "cmuwog1ms00axn60kno2fbku8",
+      "slug": "platform-stress-c58d6244-17",
+      "orderCode": "HDF"
+    },
+    {
+      "id": "cmuwog1o600bkn60klb8bwqkg",
+      "slug": "platform-stress-c58d6244-18",
+      "orderCode": "HE0"
+    },
+    {
+      "id": "cmuwog1pg00c7n60kzk4nd6up",
+      "slug": "platform-stress-c58d6244-19",
+      "orderCode": "HE1"
+    },
+    {
+      "id": "cmuwog1qo00cun60kmnn4udi5",
+      "slug": "platform-stress-c58d6244-20",
+      "orderCode": "HE2"
+    },
+    {
+      "id": "cmuwog1s200dhn60kycou9vx8",
+      "slug": "platform-stress-c58d6244-21",
+      "orderCode": "HE3"
+    },
+    {
+      "id": "cmuwog1ta00e4n60kx3ul9fx6",
+      "slug": "platform-stress-c58d6244-22",
+      "orderCode": "HE4"
+    },
+    {
+      "id": "cmuwog1ur00ern60kj06xhxa1",
+      "slug": "platform-stress-c58d6244-23",
+      "orderCode": "HE5"
+    },
+    {
+      "id": "cmuwog1wa00fen60k81sgv6qv",
+      "slug": "platform-stress-c58d6244-24",
+      "orderCode": "HE6"
+    },
+    {
+      "id": "cmuwog1xk00g1n60kdtr9d120",
+      "slug": "platform-stress-c58d6244-25",
+      "orderCode": "HE7"
+    },
+    {
+      "id": "cmuwog1ys00gon60kucb4ndsu",
+      "slug": "platform-stress-c58d6244-26",
+      "orderCode": "HE8"
+    },
+    {
+      "id": "cmuwog20200hbn60kciy47xvf",
+      "slug": "platform-stress-c58d6244-27",
+      "orderCode": "HE9"
+    },
+    {
+      "id": "cmuwog21800hyn60kqyc8dsyb",
+      "slug": "platform-stress-c58d6244-28",
+      "orderCode": "HEA"
+    },
+    {
+      "id": "cmuwog22700iln60k60gnbgjj",
+      "slug": "platform-stress-c58d6244-29",
+      "orderCode": "HEB"
+    },
+    {
+      "id": "cmuwog23700j8n60kk19nin81",
+      "slug": "platform-stress-c58d6244-30",
+      "orderCode": "HEC"
+    },
+    {
+      "id": "cmuwog25k00kin60k7ncr6ixi",
+      "slug": "platform-stress-c58d6244-32",
+      "orderCode": "HEE"
+    },
+    {
+      "id": "cmuwog26m00l5n60kieng4fjw",
+      "slug": "platform-stress-c58d6244-33",
+      "orderCode": "HEF"
+    },
+    {
+      "id": "cmuwog27k00lsn60kx4sr2860",
+      "slug": "platform-stress-c58d6244-34",
+      "orderCode": "HF0"
+    },
+    {
+      "id": "cmuwog28i00mfn60kr0alfwew",
+      "slug": "platform-stress-c58d6244-35",
+      "orderCode": "HF1"
+    },
+    {
+      "id": "cmuwog29g00n2n60klezo0nx2",
+      "slug": "platform-stress-c58d6244-36",
+      "orderCode": "HF2"
+    },
+    {
+      "id": "cmuwog2ag00npn60kkj5et9j0",
+      "slug": "platform-stress-c58d6244-37",
+      "orderCode": "HF3"
+    },
+    {
+      "id": "cmuwog2cd00ozn60kqrynoyyg",
+      "slug": "platform-stress-c58d6244-39",
+      "orderCode": "HF5"
+    },
+    {
+      "id": "cmuwog2df00pmn60kot12kytv",
+      "slug": "platform-stress-c58d6244-40",
+      "orderCode": "HF6"
+    },
+    {
+      "id": "cmuwog2ed00q9n60kladm8vaz",
+      "slug": "platform-stress-c58d6244-41",
+      "orderCode": "HF7"
+    },
+    {
+      "id": "cmuwog2fc00qwn60kcdoenind",
+      "slug": "platform-stress-c58d6244-42",
+      "orderCode": "HF8"
+    },
+    {
+      "id": "cmuwog2hg00s6n60kdake21i2",
+      "slug": "platform-stress-c58d6244-44",
+      "orderCode": "HFA"
+    },
+    {
+      "id": "cmuwog2if00stn60kzzozbrrk",
+      "slug": "platform-stress-c58d6244-45",
+      "orderCode": "HFB"
+    },
+    {
+      "id": "cmuwog2jc00tgn60krr48ukoi",
+      "slug": "platform-stress-c58d6244-46",
+      "orderCode": "HFC"
+    },
+    {
+      "id": "cmuwog2k900u3n60k3qzoyjzy",
+      "slug": "platform-stress-c58d6244-47",
+      "orderCode": "HFD"
+    },
+    {
+      "id": "cmuwog2l800uqn60kvm5w8j4w",
+      "slug": "platform-stress-c58d6244-48",
+      "orderCode": "HFE"
+    },
+    {
+      "id": "cmuwog2nf00w0n60ksjzm4u1o",
+      "slug": "platform-stress-c58d6244-50",
+      "orderCode": "H100"
+    },
+    {
+      "id": "cmuwog2pm00xan60kxgek9y1x",
+      "slug": "platform-stress-c58d6244-52",
+      "orderCode": "H102"
+    },
+    {
+      "id": "cmuwog2qq00xxn60k3ccmfp4c",
+      "slug": "platform-stress-c58d6244-53",
+      "orderCode": "H103"
+    },
+    {
+      "id": "cmuwog2u300zun60k236nb0kn",
+      "slug": "platform-stress-c58d6244-56",
+      "orderCode": "H106"
+    },
+    {
+      "id": "cmuwog2v6010hn60kb3vzck7k",
+      "slug": "platform-stress-c58d6244-57",
+      "orderCode": "H107"
+    },
+    {
+      "id": "cmuwog2xu011rn60k3624fm6t",
+      "slug": "platform-stress-c58d6244-59",
+      "orderCode": "H109"
+    },
+    {
+      "id": "cmuwog3080131n60kozjvgk36",
+      "slug": "platform-stress-c58d6244-61",
+      "orderCode": "H10B"
+    },
+    {
+      "id": "cmuwog31f013on60ksmcsutn1",
+      "slug": "platform-stress-c58d6244-62",
+      "orderCode": "H10C"
+    },
+    {
+      "id": "cmuwog33s014yn60kvijxpn6p",
+      "slug": "platform-stress-c58d6244-64",
+      "orderCode": "H10E"
+    },
+    {
+      "id": "cmuwog34u015ln60krrsvnv2i",
+      "slug": "platform-stress-c58d6244-65",
+      "orderCode": "H10F"
+    },
+    {
+      "id": "cmuwog36w016vn60ku44gsoqf",
+      "slug": "platform-stress-c58d6244-67",
+      "orderCode": "H111"
+    },
+    {
+      "id": "cmuwog38z0185n60kz9ra29i9",
+      "slug": "platform-stress-c58d6244-69",
+      "orderCode": "H113"
+    },
+    {
+      "id": "cmuwog3b2019fn60k5q1h3ycq",
+      "slug": "platform-stress-c58d6244-71",
+      "orderCode": "H115"
+    },
+    {
+      "id": "cmuwog3c201a2n60ks1f28iaf",
+      "slug": "platform-stress-c58d6244-72",
+      "orderCode": "H116"
+    },
+    {
+      "id": "cmuwog3f001bzn60kbkeelo4d",
+      "slug": "platform-stress-c58d6244-75",
+      "orderCode": "H119"
+    },
+    {
+      "id": "cmuwog3gx01d9n60kvi5wt9z0",
+      "slug": "platform-stress-c58d6244-77",
+      "orderCode": "H11B"
+    },
+    {
+      "id": "cmuwog3ll01ggn60k73mur9df",
+      "slug": "platform-stress-c58d6244-82",
+      "orderCode": "H120"
+    },
+    {
+      "id": "cmuwog3pi01j0n60k2y23zrib",
+      "slug": "platform-stress-c58d6244-86",
+      "orderCode": "H124"
+    },
+    {
+      "id": "cmuwog3qd01jnn60k6f759d5i",
+      "slug": "platform-stress-c58d6244-87",
+      "orderCode": "H125"
+    },
+    {
+      "id": "cmuwog3s301kxn60kneo0wgvs",
+      "slug": "platform-stress-c58d6244-89",
+      "orderCode": "H127"
+    },
+    {
+      "id": "cmuwog3tz01m7n60k4vyys6w6",
+      "slug": "platform-stress-c58d6244-91",
+      "orderCode": "H129"
+    },
+    {
+      "id": "cmuwog24500jvn60kk6xb4wfk",
+      "slug": "platform-stress-c58d6244-31",
+      "orderCode": "HED"
+    },
+    {
+      "id": "cmuwog2be00ocn60k6yuoudt4",
+      "slug": "platform-stress-c58d6244-38",
+      "orderCode": "HF4"
+    },
+    {
+      "id": "cmuwog2gc00rjn60kdz8w86px",
+      "slug": "platform-stress-c58d6244-43",
+      "orderCode": "HF9"
+    },
+    {
+      "id": "cmuwog2mb00vdn60krik9qxwa",
+      "slug": "platform-stress-c58d6244-49",
+      "orderCode": "HFF"
+    },
+    {
+      "id": "cmuwog2oi00wnn60k54g8czpq",
+      "slug": "platform-stress-c58d6244-51",
+      "orderCode": "H101"
+    },
+    {
+      "id": "cmuwog2rw00ykn60kldegblok",
+      "slug": "platform-stress-c58d6244-54",
+      "orderCode": "H104"
+    },
+    {
+      "id": "cmuwog2t100z7n60kt2yodeur",
+      "slug": "platform-stress-c58d6244-55",
+      "orderCode": "H105"
+    },
+    {
+      "id": "cmuwog2we0114n60kgqe3bf2r",
+      "slug": "platform-stress-c58d6244-58",
+      "orderCode": "H108"
+    },
+    {
+      "id": "cmuwog2yx012en60klb4x25b5",
+      "slug": "platform-stress-c58d6244-60",
+      "orderCode": "H10A"
+    },
+    {
+      "id": "cmuwog32i014bn60kqy0bjtih",
+      "slug": "platform-stress-c58d6244-63",
+      "orderCode": "H10D"
+    },
+    {
+      "id": "cmuwog35w0168n60kpebzt1ek",
+      "slug": "platform-stress-c58d6244-66",
+      "orderCode": "H110"
+    },
+    {
+      "id": "cmuwog37z017in60kof8hqcia",
+      "slug": "platform-stress-c58d6244-68",
+      "orderCode": "H112"
+    },
+    {
+      "id": "cmuwog39x018sn60kyve5kohr",
+      "slug": "platform-stress-c58d6244-70",
+      "orderCode": "H114"
+    },
+    {
+      "id": "cmuwog3cy01apn60khw6ihy2p",
+      "slug": "platform-stress-c58d6244-73",
+      "orderCode": "H117"
+    },
+    {
+      "id": "cmuwog3e201bcn60kbz1oymlu",
+      "slug": "platform-stress-c58d6244-74",
+      "orderCode": "H118"
+    },
+    {
+      "id": "cmuwog3fz01cmn60k9y3ai1xy",
+      "slug": "platform-stress-c58d6244-76",
+      "orderCode": "H11A"
+    },
+    {
+      "id": "cmuwog3hy01dwn60krbibajiq",
+      "slug": "platform-stress-c58d6244-78",
+      "orderCode": "H11C"
+    },
+    {
+      "id": "cmuwog3it01ejn60knygmwtxv",
+      "slug": "platform-stress-c58d6244-79",
+      "orderCode": "H11D"
+    },
+    {
+      "id": "cmuwog3jq01f6n60kp1t4z006",
+      "slug": "platform-stress-c58d6244-80",
+      "orderCode": "H11E"
+    },
+    {
+      "id": "cmuwog3kn01ftn60k36ugkwce",
+      "slug": "platform-stress-c58d6244-81",
+      "orderCode": "H11F"
+    },
+    {
+      "id": "cmuwog3mk01h3n60kuoepovc9",
+      "slug": "platform-stress-c58d6244-83",
+      "orderCode": "H121"
+    },
+    {
+      "id": "cmuwog3ng01hqn60k73zihmbx",
+      "slug": "platform-stress-c58d6244-84",
+      "orderCode": "H122"
+    },
+    {
+      "id": "cmuwog3og01idn60kpagkpkfl",
+      "slug": "platform-stress-c58d6244-85",
+      "orderCode": "H123"
+    },
+    {
+      "id": "cmuwog3r801kan60ks123er4d",
+      "slug": "platform-stress-c58d6244-88",
+      "orderCode": "H126"
+    },
+    {
+      "id": "cmuwog3t401lkn60ko407yxnh",
+      "slug": "platform-stress-c58d6244-90",
+      "orderCode": "H128"
+    },
+    {
+      "id": "cmuwog3uu01mun60k8hns84kr",
+      "slug": "platform-stress-c58d6244-92",
+      "orderCode": "H12A"
+    },
+    {
+      "id": "cmuwog3wu01nhn60kt67fe8az",
+      "slug": "platform-stress-c58d6244-93",
+      "orderCode": "H12B"
+    },
+    {
+      "id": "cmuwog3yb01o4n60kg0ecbezu",
+      "slug": "platform-stress-c58d6244-94",
+      "orderCode": "H12C"
+    },
+    {
+      "id": "cmuwog3zf01orn60k4nay12f0",
+      "slug": "platform-stress-c58d6244-95",
+      "orderCode": "H12D"
+    },
+    {
+      "id": "cmuwog42c01qon60knovyapsu",
+      "slug": "platform-stress-c58d6244-98",
+      "orderCode": "H130"
+    },
+    {
+      "id": "cmuwog40n01pen60ke6bb7yzz",
+      "slug": "platform-stress-c58d6244-96",
+      "orderCode": "H12E"
+    },
+    {
+      "id": "cmuwog41i01q1n60kc1w2ihn0",
+      "slug": "platform-stress-c58d6244-97",
+      "orderCode": "H12F"
+    },
+    {
+      "id": "cmuwog43401rbn60k8mm73jsi",
+      "slug": "platform-stress-c58d6244-99",
+      "orderCode": "H131"
+    }
+  ],
+  "settings": [
+    {
+      "name": "lock_timeout",
+      "setting": "0"
+    },
+    {
+      "name": "max_connections",
+      "setting": "100"
+    },
+    {
+      "name": "shared_buffers",
+      "setting": "16384"
+    },
+    {
+      "name": "statement_timeout",
+      "setting": "0"
+    },
+    {
+      "name": "TimeZone",
+      "setting": "UTC"
+    }
+  ]
+}

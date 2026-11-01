@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "24"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# Set TABLEBABU_APP_ORIGIN in Netlify after deploying the separate Node app.
+# Netlify supplies URL for the public website's canonical origin.

@@ -1,0 +1,63 @@
+# Security controls and deployment requirements
+
+India privacy/legal implementation and outstanding operational requirements are documented in [INDIA-COMPLIANCE.md](INDIA-COMPLIANCE.md). Policy pages, versioned owner acceptance and an admin-only privacy-request inbox do not establish full DPDP compliance. Erasure, consent-withdrawal fulfilment, identity verification, retention scheduling and incident reporting require operator action; they are not automated by those pages.
+
+This application has layered security controls, not a guarantee against every attack. An independent penetration test and operational review remain necessary before handling real customer data at scale.
+
+## Implemented controls
+
+- The unlisted `/control-room` platform page accepts authenticated platform `ADMIN` and `STAFF` accounts. APIs require the matching role permissions and restaurant assignments; employee/role administration requires `ADMIN`. URL secrecy is not an authorization mechanism. Administrators are provisioned with a server-side CLI, never by public signup. Platform administrators may manage subscription access and payment instructions across restaurants; owner APIs remain tenant-scoped. Platform accounts can change their password without owning a restaurant.
+- Platform freeze and subscription expiry are independent of owner-editable kitchen settings. New orders are validated against them inside the order transaction. Existing orders and billing remain accessible to avoid stranding guests. Subscription UPI details and payment QR endpoints are authenticated and tenant-scoped, and these payment details are excluded from public restaurant responses. The payment QR is a payment instruction, not proof of payment.
+- Subscription writes use version checks and serializable transactions. Manually recorded payments require a unique per-restaurant reference and idempotency key. Freeze, QR assignment, and subscription payment operations generate database audit records identifying the administrator and prior subscription state. These application records have no update/delete API, but still require restricted database access and external retention controls for tamper resistance.
+
+- Owner passwords use bcrypt with cost 12, with a minimum 12-character password policy on registration and password changes. Passwords exceeding bcrypt's UTF-8 byte limit are rejected.
+- Owner and guest credentials are random 256-bit opaque tokens, hashed in the database. Cookies are HttpOnly and SameSite=Lax; production uses Secure `__Host-` cookies. Login rotates the current browser's previous owner session. Logout revokes the server-side session and associated sockets.
+- Settings includes a current-password-verified password change. The password update and revocation of every owner session happen in one transaction. All those authenticated sockets are disconnected, and the owner signs in again.
+- Owner sessions expire after 12 hours and customer sessions after 24 hours. These are absolute expirations, not idle timeouts. Changing a password invalidates owner sessions immediately.
+- Every admin API resolves the restaurant from the authenticated owner's restaurants. User-supplied restaurant identifiers are checked against that ownership. Customer sessions are bound to one restaurant. Public drafts are inaccessible even if accidentally marked active.
+- Write APIs require an exact configured Origin. Cross-site Fetch Metadata requests are rejected before body parsing. Production requires an exact HTTPS APP_ORIGIN.
+- HTML uses a fresh cryptographic CSP nonce for every response. Next's framework scripts receive that nonce; arbitrary inline scripts are blocked. Production forbids `unsafe-eval`. Inline styles remain allowed for restaurant branding. Framing, plugin objects, base-URL overrides, and off-site form actions are prohibited. Pages render dynamically because nonces cannot be reused in cached HTML.
+- Login and registration share a PostgreSQL-backed account throttle (20 attempts per 15-minute fixed window), in addition to per-IP process-local limits. Order submissions have a shared per-session limit of 20/minute; service requests 10/minute; password changes 5/15 minutes. Shared counters are atomic and survive process restarts. Temporary database failures fail closed. Fixed-window limits can allow a burst across a window boundary.
+- Uploads require an authenticated owner, accept only static JPEG/PNG/WebP verified by decoding, cap files at 5 MB and 25 million decoded pixels, strip metadata by re-encoding, and store random WebP filenames. SVG and animated formats are rejected. Upload requests are additionally limited to 10 per minute per owner per process.
+- Prisma parameterization, server validation, tenant-scoped lookups, immutable order snapshots, database-derived totals, idempotency, and transactional workflow checks protect orders and bills. Payment selection never proves payment; staff must explicitly record receipt of payment.
+- APIs send `Cache-Control: no-store`. Errors do not include SQL, stack traces, request bodies, passwords, cookies, or session tokens. Every API write and failed API request emits a structured JSON audit event with generated request ID, route template, status, owner ID, and restaurant ID when authenticated. Login is audited; failed login events deliberately exclude email addresses.
+- Server header and request timeouts, JSON body size limits, disabled compressed JSON parsing, restrictive browser permissions, security headers, socket origin checks, socket authentication and room isolation provide additional boundaries.
+
+### Platform employee access and session history
+
+Platform employees are distinct from restaurant owners. New employee accounts always use `STAFF`; requests cannot promote an owner or grant `ADMIN`. Custom roles allow only the enumerated business permissions. Restaurant visibility is an independent allowlist (or an explicit all-restaurants grant). The server scopes list, detail, QR, and write access; it also redacts financial history and QR data for roles without those permissions. The UI hides unavailable actions but is not the security boundary. Unfreezing while recording payment additionally requires access-management permission.
+
+Employee and role changes require an administrator and optimistic version checks. Writes recheck authorization inside serializable transactions. Changing roles/assignments, disabling an account, or resetting its password revokes affected sessions. Disabled accounts cannot authenticate. Existing administrator accounts cannot be edited through employee endpoints. Password hashes and session credentials never appear in employee listings or audit payloads.
+
+Successful logins and session-ending actions are recorded separately from deletable authentication sessions. History records UTC instants; the admin UI and date filters use IST. Expiry is derived from the recorded expiry time and is never misreported as an explicit logout. Sign-in sessions are not online presence or employee attendance. Employee-change audit records exclude plaintext passwords. Configure access, archival, and deletion policies for these new personal-data records before production use.
+
+## Required production operations
+
+1. Deploy the additive migrations with `npm run db:migrate` before starting the new server. Build with `npm run build`; run `NODE_ENV=production` behind HTTPS. Preserve the uploads volume. Do not serve this application with a generic `next start`; use `npm start` for the API and sockets.
+2. Set APP_ORIGIN to the single public HTTPS origin, without a path or trailing slash. Set TRUST_PROXY=1 only when the application is reachable through exactly one trusted proxy. Firewall the application port so clients cannot bypass that proxy or forge forwarding headers. The default TRUST_PROXY=0 ignores forwarded client addresses.
+3. At the ingress, enforce connection, upload, request, and WebSocket handshake limits and a maximum request-body size. Per-IP and upload limits in this app are process-local; they do not replace perimeter protection or distributed denial-of-service mitigation. Use an appropriate sticky-session strategy if running multiple Socket.IO workers; this repository does not yet have a cross-worker socket adapter.
+4. Use a dedicated least-privilege database runtime account, strong unique database credentials, private networking, TLS for remote database connections, encrypted storage and backups. Restrict migration privileges to deployment. Keep secrets outside source control and container images. Rotate compromised secrets and owner passwords.
+5. Forward structured security events to restricted, append-only central storage with retention, alerting, and access review. Local stdout alone is not a durable or tamper-resistant audit archive. Application logs record requests, not complete before/after business data. Monitor failed authentication, rate-limit responses, privileged writes, and elevated error rates.
+6. Test encrypted backup restoration and define customer/session/log retention and deletion policies. Order-session expiry disables access; it does not delete financial records. Expired throttle records are periodically removed; define scheduled cleanup for expired owner sessions and other retained data.
+7. Run the security/browser regression suite and dependency audit before release. Keep Node, PostgreSQL, operating-system packages, npm dependencies, and container images patched. The npm audit result covers known npm advisories only.
+
+## Explicit limitations
+
+MFA, verified-email enrollment/recovery, enterprise SSO, idle-session expiry, centralized tamper-resistant audit storage, infrastructure TLS/backup/key management, automated anomaly response, and an independent penetration test are not implemented by this change. Do not represent this application as certified, compliant with a particular standard, or fully enterprise-ready solely because these code-level controls are present. Choose and configure those operational and identity controls for your deployment before making such claims.
+
+## Verification
+
+`npm run typecheck`, `npm test`, `npm run test:e2e`, `npm run build`, and `npm audit --omit=dev` are the release checks. The security browser suite exercises nonce enforcement, CSRF, invalid/replayed cookies, session rotation, draft privacy, disguised SVG rejection, valid image re-encoding, password-change revocation, and concurrent shared throttling. The ordering suite additionally covers tenant isolation, spoofed prices, duplicate submissions, unauthorized sockets, offline recovery, and paid-session immutability.
+
+## Concurrent ordering update
+
+Order creation now uses targeted PostgreSQL row locks, atomic restaurant/year counters and database identity constraints. Bill/help requests serialize per customer session. Other admin transactions retain serializable isolation. Endpoint families have independent IP envelopes while shared per-session/account throttles remain enabled. See [ORDERING-CONCURRENCY.md](ORDERING-CONCURRENCY.md) for the invariant proof, limits and migration requirements. Runtime roles need USAGE on restaurant_code_seq. Diagnostic logs exclude raw SQL and request payloads.
+
+
+## Subscription QR upload and lock controls (7 October 2026)
+
+Only platform ADMIN users may upload, generate, remove, lock or unlock subscription payment QRs. The historical `qr:manage` employee permission now grants viewing only. Mutations recheck active authentication and the ADMIN role inside the same serializable transaction as the version-checked write. Saving an image or UPI QR locks it automatically; replacement/removal requires a separate administrator unlock. Existing assigned QRs are locked during migration.
+
+Uploads are limited to one static JPEG/PNG/WebP, 5 MB and 4 million decoded pixels, with a per-admin upload quota and shared decoding capacity limit. Images are decoded and re-encoded to PNG without source metadata; SVG/animated/disguised files are rejected. Private bytes live in a dedicated database table and are served only through authorized, no-store endpoints. No image path supplied by a client is trusted. Audit records capture upload/lock actions without copying binary images. The app does not independently verify that an uploaded image contains a valid UPI QR or that the bank recipient is correct; administrators must verify it before sharing.
+
+Verification: `tests/e2e/subscription-qr.spec.ts` covers browser upload/lock controls, owner download, unauthorized owner/staff changes, staff restrictions while unlocked, SVG rejection, stale versions, and concurrent lock/replacement. Existing platform subscription tests also pass.

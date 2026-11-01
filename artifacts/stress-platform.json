@@ -1,0 +1,244 @@
+{
+  "startedAt": "2026-10-07T12:31:31.664Z",
+  "endedAt": "2026-10-07T12:47:40.371Z",
+  "environment": "Local development server, 100 hotels, 1000 guest sessions, 300 sockets, single IP",
+  "results": [
+    {
+      "name": "100-hotels-orders",
+      "requests": 1000,
+      "concurrency": 100,
+      "seconds": 13.27,
+      "requestsPerSecond": 75.4,
+      "p50Ms": 1259.8,
+      "p95Ms": 1557.7,
+      "p99Ms": 1785.3,
+      "statuses": {
+        "201": 1000
+      }
+    },
+    {
+      "name": "100-hotels-mixed",
+      "requests": 1500,
+      "concurrency": 100,
+      "seconds": 16.62,
+      "requestsPerSecond": 90.2,
+      "p50Ms": 973.9,
+      "p95Ms": 1829.1,
+      "p99Ms": 2290.7,
+      "statuses": {
+        "200": 1000,
+        "201": 500
+      }
+    },
+    {
+      "name": "shared-IP-menu",
+      "requests": 3000,
+      "concurrency": 100,
+      "seconds": 16.58,
+      "requestsPerSecond": 180.9,
+      "p50Ms": 501.2,
+      "p95Ms": 944.2,
+      "p99Ms": 1095.4,
+      "statuses": {
+        "200": 3000
+      }
+    },
+    {
+      "name": "soak-minute-1",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 64.49,
+      "requestsPerSecond": 1.9,
+      "p50Ms": 45.2,
+      "p95Ms": 70.1,
+      "p99Ms": 305.5,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-2",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 63.97,
+      "requestsPerSecond": 1.9,
+      "p50Ms": 45.9,
+      "p95Ms": 66.6,
+      "p99Ms": 100.1,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-3",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 63.9,
+      "requestsPerSecond": 1.9,
+      "p50Ms": 43.3,
+      "p95Ms": 58.1,
+      "p99Ms": 108.6,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-4",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 64,
+      "requestsPerSecond": 1.9,
+      "p50Ms": 45,
+      "p95Ms": 61.5,
+      "p99Ms": 74.5,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-5",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 66.64,
+      "requestsPerSecond": 1.8,
+      "p50Ms": 53.7,
+      "p95Ms": 64.9,
+      "p99Ms": 2245.9,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-6",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 64.54,
+      "requestsPerSecond": 1.9,
+      "p50Ms": 51.8,
+      "p95Ms": 69.2,
+      "p99Ms": 79,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-7",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 64.56,
+      "requestsPerSecond": 1.9,
+      "p50Ms": 52.2,
+      "p95Ms": 63.8,
+      "p99Ms": 87.7,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-8",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 64.46,
+      "requestsPerSecond": 1.9,
+      "p50Ms": 50.7,
+      "p95Ms": 63,
+      "p99Ms": 84.6,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-9",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 64.35,
+      "requestsPerSecond": 1.9,
+      "p50Ms": 49.8,
+      "p95Ms": 65.8,
+      "p99Ms": 76.3,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-10",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 65.76,
+      "requestsPerSecond": 1.8,
+      "p50Ms": 42.1,
+      "p95Ms": 55.5,
+      "p99Ms": 2137.4,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-11",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 65.37,
+      "requestsPerSecond": 1.8,
+      "p50Ms": 61.2,
+      "p95Ms": 100.4,
+      "p99Ms": 186.5,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-12",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 64.99,
+      "requestsPerSecond": 1.8,
+      "p50Ms": 53.6,
+      "p95Ms": 88.3,
+      "p99Ms": 132.3,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-13",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 65.3,
+      "requestsPerSecond": 1.8,
+      "p50Ms": 57,
+      "p95Ms": 101.6,
+      "p99Ms": 200.9,
+      "statuses": {
+        "201": 120
+      }
+    },
+    {
+      "name": "soak-minute-15",
+      "requests": 120,
+      "concurrency": 2,
+      "seconds": 66.26,
+      "requestsPerSecond": 1.8,
+      "p50Ms": 44.3,
+      "p95Ms": 65.7,
+      "p99Ms": 2185.7,
+      "statuses": {
+        "201": 120
+      }
+    }
+  ],
+  "checks": {
+    "socketConnections": true,
+    "sharedIpHealth": true,
+    "sharedIpOrder": true,
+    "soakDuration": true,
+    "pricing": true,
+    "numbers": true,
+    "noLoss": true,
+    "realtime": true,
+    "noUnexpectedHttpFailures": true,
+    "healthyAfterLoad": true
+  },
+  "persistedOrders": 3181,
+  "realtimeEvents": 3181,
+  "fixturesRemoved": true
+}

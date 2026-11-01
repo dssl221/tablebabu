@@ -1,0 +1,135 @@
+{
+  "timestamp": "2026-10-06T12:26:45.747Z",
+  "environment": "Local development server; single host; seeded sessions; no browser rendering or external network",
+  "results": [
+    {
+      "name": "menu-10",
+      "requests": 1000,
+      "concurrency": 10,
+      "seconds": 3.39,
+      "requestsPerSecond": 294.8,
+      "p50Ms": 31.3,
+      "p95Ms": 50,
+      "p99Ms": 63,
+      "statuses": {
+        "200": 1000
+      }
+    },
+    {
+      "name": "menu-50",
+      "requests": 1000,
+      "concurrency": 50,
+      "seconds": 2.5,
+      "requestsPerSecond": 400.5,
+      "p50Ms": 107.5,
+      "p95Ms": 213,
+      "p99Ms": 277,
+      "statuses": {
+        "200": 198,
+        "429": 802
+      }
+    },
+    {
+      "name": "menu-100",
+      "requests": 1000,
+      "concurrency": 100,
+      "seconds": 1.96,
+      "requestsPerSecond": 510.1,
+      "p50Ms": 184.4,
+      "p95Ms": 255.9,
+      "p99Ms": 267.1,
+      "statuses": {
+        "429": 1000
+      }
+    },
+    {
+      "name": "orders-10",
+      "requests": 100,
+      "concurrency": 10,
+      "seconds": 0.23,
+      "requestsPerSecond": 430.5,
+      "p50Ms": 18.7,
+      "p95Ms": 31.3,
+      "p99Ms": 32.8,
+      "statuses": {
+        "429": 100
+      }
+    },
+    {
+      "name": "orders-25",
+      "requests": 100,
+      "concurrency": 25,
+      "seconds": 0.22,
+      "requestsPerSecond": 462.3,
+      "p50Ms": 49.2,
+      "p95Ms": 55.7,
+      "p99Ms": 58.6,
+      "statuses": {
+        "429": 100
+      }
+    },
+    {
+      "name": "orders-50",
+      "requests": 100,
+      "concurrency": 50,
+      "seconds": 0.23,
+      "requestsPerSecond": 442.4,
+      "p50Ms": 88.8,
+      "p95Ms": 110.2,
+      "p99Ms": 110.7,
+      "statuses": {
+        "429": 100
+      }
+    },
+    {
+      "name": "duplicate-submit",
+      "requests": 10,
+      "concurrency": 10,
+      "seconds": 0.03,
+      "requestsPerSecond": 371.9,
+      "p50Ms": 13.6,
+      "p95Ms": 22,
+      "p99Ms": 22,
+      "statuses": {
+        "429": 10
+      }
+    },
+    {
+      "name": "order-rate-limit",
+      "requests": 30,
+      "concurrency": 10,
+      "seconds": 0.07,
+      "requestsPerSecond": 442.2,
+      "p50Ms": 20.7,
+      "p95Ms": 23,
+      "p99Ms": 23.3,
+      "statuses": {
+        "429": 30
+      }
+    },
+    {
+      "name": "session-rate-limit",
+      "requests": 25,
+      "concurrency": 5,
+      "seconds": 0.08,
+      "requestsPerSecond": 329.5,
+      "p50Ms": 14.1,
+      "p95Ms": 17.5,
+      "p99Ms": 19.5,
+      "statuses": {
+        "429": 25
+      }
+    }
+  ],
+  "checks": {
+    "socketConnections": true,
+    "idempotency": false,
+    "rateLimit": true,
+    "serverPricing": true,
+    "uniqueNumbers": true,
+    "realtimeExactlyOnce": true,
+    "healthyAfterLoad": false,
+    "noUnexpectedHttpFailures": false
+  },
+  "fixturesRemoved": true
+}

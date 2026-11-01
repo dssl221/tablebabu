@@ -1,0 +1,537 @@
+/* Shared sizing rules: readable content, natural scrolling, and reachable actions. */
+.transaction-export {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 24px 0;
+}
+.transaction-export > div:first-child {
+  flex: 1 1 260px;
+}
+.transaction-export-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+}
+.transaction-export-controls label {
+  flex: 1 1 180px;
+}
+.transaction-export-controls .button {
+  flex: 1 1 auto;
+}
+:root {
+  --muted: #626d63;
+}
+html {
+  scroll-padding-top: 84px;
+}
+body {
+  line-height: 1.5;
+}
+:focus-visible {
+  outline: 3px solid #527a60;
+  outline-offset: 3px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #737b70;
+  opacity: 1;
+}
+h1,
+h2,
+h3,
+p,
+label {
+  overflow-wrap: anywhere;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+.button,
+.icon-button,
+.logout-button,
+.order-tabs button,
+.category-tabs button {
+  min-height: 44px;
+}
+.icon-button {
+  min-width: 44px;
+}
+.button {
+  font-size: 14px;
+  white-space: normal;
+}
+.text-link {
+  font-size: 13px;
+}
+.admin-dish-body > p,
+.customer-brand small,
+.customer-greeting,
+.menu-summary,
+.review-check-row strong,
+.review-check-row small,
+.launch-preference p,
+.publish-note,
+.review-qr-note,
+.preview-caption,
+.setup-header-label {
+  color: #5e6d56;
+}
+.customer-brand small {
+  letter-spacing: 0.5px;
+}
+.setup-content .text-link {
+  min-height: 44px;
+}
+.sidebar,
+.setup-sidebar {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: 20px;
+}
+.sidebar-bottom {
+  flex-shrink: 0;
+}
+.sidebar nav a {
+  min-height: 46px;
+  font-size: 14px;
+}
+.qr-tip {
+  display: none;
+}
+.dashboard-content {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding: clamp(20px, 3vw, 44px);
+}
+.dashboard-content > *,
+.section-title > *,
+.form-grid > *,
+.toolbar > *,
+.setup-content > * {
+  min-width: 0;
+}
+.section-title {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.section-title h1 {
+  font-size: clamp(26px, 3vw, 34px);
+}
+.section-title p,
+.setup-page-heading > p {
+  font-size: 14px;
+  color: #626d63;
+}
+.eyebrow {
+  letter-spacing: 1.2px;
+  line-height: 1.7;
+}
+.toolbar {
+  flex-wrap: wrap;
+}
+.toolbar .search-field {
+  flex: 1 1 220px;
+}
+.toolbar .button-group {
+  flex-wrap: wrap;
+}
+.menu-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+}
+.admin-dish-body > p {
+  min-height: 0;
+  font-size: 14px;
+}
+.dish-name h3 {
+  font-size: 17px;
+}
+.availability-row {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.availability-switch {
+  min-height: 44px;
+  gap: 8px;
+}
+.availability-switch b {
+  font-size: 12px;
+}
+.reorder-buttons .icon-button {
+  min-width: 36px;
+  min-height: 44px;
+}
+.reorder-buttons svg {
+  width: 18px;
+}
+.photo-edit {
+  width: 44px;
+  height: 44px;
+}
+.metric-card {
+  min-width: 0;
+}
+.metric-card p,
+.metric-label,
+.panel-subtitle {
+  font-size: 13px;
+}
+.metric-card > strong {
+  font-size: clamp(25px, 3vw, 36px);
+  overflow-wrap: anywhere;
+}
+.order-person h2 {
+  overflow-wrap: anywhere;
+}
+.order-tabs {
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 6px;
+}
+.order-tabs button {
+  flex-shrink: 0;
+  font-size: 13px;
+}
+.modal {
+  max-height: calc(100dvh - 32px);
+  overscroll-behavior: contain;
+}
+.modal-head {
+  gap: 12px;
+}
+.modal-actions {
+  flex-wrap: wrap;
+}
+.modal-actions .button {
+  flex: 1 1 130px;
+}
+.payment-choice label {
+  flex-direction: row;
+  min-height: 52px;
+  font-size: 16px;
+}
+.payment-choice p {
+  font-size: 13px;
+}
+.customer-frame {
+  width: 100%;
+}
+.customer-brand {
+  min-width: 0;
+}
+.customer-brand > span {
+  min-width: 0;
+}
+.customer-header {
+  gap: 12px;
+}
+.customer-header .orders-shortcut {
+  flex-shrink: 0;
+}
+.customer-dish h3 {
+  font-size: 17px;
+  line-height: 1.4;
+}
+.customer-dish p {
+  font-size: 14px;
+  color: #626d63;
+}
+.customer-dish {
+  min-width: 0;
+}
+.customer-dish > div {
+  min-width: 0;
+}
+.quantity-control button {
+  min-height: 40px;
+  min-width: 32px;
+}
+.customer-dish-photo > .add-button {
+  min-height: 44px;
+  font-size: 14px;
+}
+.customer-categories {
+  scroll-padding: 20px;
+}
+.customer-categories button {
+  min-height: 44px;
+  font-size: 14px;
+}
+.sticky-cart {
+  bottom: max(12px, env(safe-area-inset-bottom));
+}
+.customer-frame:has(.sticky-cart) {
+  padding-bottom: calc(104px + env(safe-area-inset-bottom));
+}
+.customer-info {
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.customer-info .button {
+  flex: 1 1 100%;
+}
+.customer-inner,
+.welcome-body {
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+}
+.customer-footer,
+.dashboard-footer,
+.setup-footer,
+.signup-footer {
+  font-size: 12px;
+  line-height: 1.6;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.setup-sidebar-title p,
+.setup-step small,
+.setup-account-step small {
+  font-size: 12px;
+}
+.setup-form-layout,
+.setup-review-layout,
+.setup-menu-layout {
+  min-width: 0;
+}
+.setup-content label,
+.signup-form label {
+  font-size: 14px;
+}
+.setup-page-heading h1 {
+  font-size: clamp(26px, 3vw, 36px);
+}
+.setup-content input,
+.setup-content textarea,
+.setup-content select {
+  font-size: 14px !important;
+}
+.save-status {
+  font-size: 12px;
+}
+.setup-actions {
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.review-restaurant {
+  flex-wrap: wrap;
+}
+.review-restaurant > .text-link {
+  min-height: 40px;
+}
+.preview-caption {
+  letter-spacing: 1px;
+}
+.nav-close {
+  display: none;
+}
+@media (max-height: 760px) {
+  .sidebar-brand {
+    margin-bottom: 18px;
+  }
+  .sidebar-bottom {
+    margin-top: 20px;
+  }
+  .nav-label {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .sidebar {
+    width: min(290px, 85vw);
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition:
+      transform 0.2s,
+      visibility 0.2s;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  .sidebar .nav-close {
+    display: inline-flex;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .sidebar-brand {
+    margin-top: 36px;
+  }
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #14251c66;
+    z-index: 25;
+  }
+  .dashboard-main {
+    margin-left: 0;
+    width: 100%;
+  }
+  .mobile-only {
+    display: inline-flex;
+  }
+  .topbar {
+    padding: 0 16px;
+  }
+  .topbar-actions > .connection,
+  .topbar-divider,
+  .topbar-actions > .user-avatar {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+  textarea,
+  select,
+  .setup-content input,
+  .setup-content textarea,
+  .setup-content select {
+    font-size: 16px !important;
+  }
+  .topbar {
+    height: auto;
+    min-height: 64px;
+    gap: 8px;
+  }
+  .breadcrumb {
+    min-width: 0;
+    gap: 6px;
+    font-size: 14px;
+  }
+  .breadcrumb > span {
+    display: none;
+  }
+  .breadcrumb strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .topbar-actions {
+    flex-shrink: 0;
+    gap: 2px;
+  }
+  .logout-button {
+    padding: 8px;
+    font-size: 13px;
+  }
+  .dashboard-content {
+    padding: 24px 16px;
+  }
+  .section-title .button-group {
+    flex-wrap: wrap;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-grid .full {
+    grid-column: 1;
+  }
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .metric-card {
+    padding: 16px 12px;
+  }
+  .metric-icon {
+    display: none;
+  }
+  .menu-grid,
+  .order-grid,
+  .session-grid,
+  .analytics-grid,
+  .settings-panel {
+    grid-template-columns: 1fr;
+  }
+  .dish-photo {
+    height: 180px;
+  }
+  .dish-price-row strong {
+    font-size: 22px;
+  }
+  .restaurant-banner-art,
+  .restaurant-banner .eyebrow,
+  .restaurant-banner p {
+    display: none;
+  }
+  .restaurant-banner {
+    padding: 20px;
+  }
+  .restaurant-banner h2 {
+    font-size: 24px;
+  }
+  .dashboard-footer > span:last-child {
+    display: none;
+  }
+  .modal {
+    padding: 22px 18px;
+    width: calc(100% - 24px);
+  }
+  .modal-actions .button {
+    font-size: 14px;
+  }
+  .qr-print-card {
+    padding: 24px 16px;
+  }
+  .qr-layout {
+    max-width: 100%;
+  }
+  .customer-dish h3 {
+    font-size: 16px;
+  }
+  .customer-menu-heading {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .menu-hero h1 {
+    font-size: 29px;
+  }
+  .hero-food > span {
+    display: none;
+  }
+  .login-story {
+    min-height: auto;
+    padding: 24px;
+  }
+  .login-story > div:nth-child(2) {
+    display: none;
+  }
+  .login-form {
+    padding: 32px 24px;
+  }
+  .signup-story {
+    min-height: auto;
+    padding: 24px;
+  }
+  .signup-story-content,
+  .signup-story-footer {
+    display: none;
+  }
+  .setup-mobile-progress {
+    letter-spacing: 0;
+  }
+  .setup-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sidebar {
+    transition: none;
+  }
+}
+@media print {
+  .dashboard-content {
+    max-width: none;
+    padding: 0;
+  }
+}

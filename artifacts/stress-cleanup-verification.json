@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-10-07T12:47:58.458Z",
+  "fixtureRestaurants": 0,
+  "fixtureOwners": 0,
+  "counterRows": 0,
+  "fixtureThrottleRowsRemoved": 0,
+  "remainingManifestThrottleRows": 0,
+  "connections": [
+    {
+      "idleInTransaction": 0
+    }
+  ]
+}

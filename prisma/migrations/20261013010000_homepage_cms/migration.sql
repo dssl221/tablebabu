@@ -1,0 +1,9 @@
+CREATE TABLE "SiteContent" (
+ "id" TEXT PRIMARY KEY, "draft" JSONB NOT NULL, "published" JSONB,
+ "version" INTEGER NOT NULL DEFAULT 0, "updatedAt" TIMESTAMP(3) NOT NULL,
+ "publishedAt" TIMESTAMP(3)
+);
+CREATE TABLE "SiteRevision" (
+ "id" TEXT PRIMARY KEY, "actorId" TEXT NOT NULL, "action" TEXT NOT NULL,
+ "content" JSONB NOT NULL, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

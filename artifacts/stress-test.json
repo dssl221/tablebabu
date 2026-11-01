@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-10-07T12:28:11.526Z",
+  "environment": "Local development server; single host; seeded sessions; no browser rendering or external network",
+  "results": [
+    {
+      "name": "menu-10",
+      "requests": 200,
+      "concurrency": 10,
+      "seconds": 0.68,
+      "requestsPerSecond": 295.1,
+      "p50Ms": 31.6,
+      "p95Ms": 50.8,
+      "p99Ms": 54.2,
+      "statuses": {
+        "200": 200
+      }
+    },
+    {
+      "name": "menu-50",
+      "requests": 200,
+      "concurrency": 50,
+      "seconds": 0.66,
+      "requestsPerSecond": 302.3,
+      "p50Ms": 158.2,
+      "p95Ms": 203.4,
+      "p99Ms": 212.3,
+      "statuses": {
+        "200": 200
+      }
+    },
+    {
+      "name": "menu-100",
+      "requests": 200,
+      "concurrency": 100,
+      "seconds": 0.65,
+      "requestsPerSecond": 306.2,
+      "p50Ms": 299.6,
+      "p95Ms": 466,
+      "p99Ms": 474.8,
+      "statuses": {
+        "200": 200
+      }
+    },
+    {
+      "name": "orders-10",
+      "requests": 100,
+      "concurrency": 10,
+      "seconds": 1.2,
+      "requestsPerSecond": 83,
+      "p50Ms": 90.8,
+      "p95Ms": 232.2,
+      "p99Ms": 387.8,
+      "statuses": {
+        "201": 100
+      }
+    },
+    {
+      "name": "orders-25",
+      "requests": 100,
+      "concurrency": 25,
+      "seconds": 1.09,
+      "requestsPerSecond": 91.9,
+      "p50Ms": 237.4,
+      "p95Ms": 353.4,
+      "p99Ms": 429.6,
+      "statuses": {
+        "201": 100
+      }
+    },
+    {
+      "name": "orders-50",
+      "requests": 200,
+      "concurrency": 50,
+      "seconds": 2.18,
+      "requestsPerSecond": 91.5,
+      "p50Ms": 499.9,
+      "p95Ms": 621.3,
+      "p99Ms": 720.1,
+      "statuses": {
+        "201": 200
+      }
+    },
+    {
+      "name": "orders-100",
+      "requests": 200,
+      "concurrency": 100,
+      "seconds": 2.66,
+      "requestsPerSecond": 75.3,
+      "p50Ms": 1071.5,
+      "p95Ms": 1332.5,
+      "p99Ms": 1780.5,
+      "statuses": {
+        "201": 200
+      }
+    },
+    {
+      "name": "duplicate-submit",
+      "requests": 10,
+      "concurrency": 10,
+      "seconds": 0.13,
+      "requestsPerSecond": 77.3,
+      "p50Ms": 97.2,
+      "p95Ms": 127.7,
+      "p99Ms": 127.7,
+      "statuses": {
+        "200": 9,
+        "201": 1
+      }
+    },
+    {
+      "name": "order-rate-limit",
+      "requests": 50,
+      "concurrency": 10,
+      "seconds": 0.36,
+      "requestsPerSecond": 138,
+      "p50Ms": 15.1,
+      "p95Ms": 253.2,
+      "p99Ms": 281.1,
+      "statuses": {
+        "201": 14,
+        "429": 36
+      }
+    },
+    {
+      "name": "session-rate-limit",
+      "requests": 620,
+      "concurrency": 10,
+      "seconds": 1.94,
+      "requestsPerSecond": 319,
+      "p50Ms": 28.8,
+      "p95Ms": 53.6,
+      "p99Ms": 63.8,
+      "statuses": {
+        "201": 300,
+        "429": 320
+      }
+    }
+  ],
+  "checks": {
+    "socketConnections": true,
+    "idempotency": true,
+    "rateLimit": true,
+    "sessionCreationLimit": true,
+    "ordersPersisted": true,
+    "hotelNumberFormat": true,
+    "serverPricing": true,
+    "uniqueNumbers": true,
+    "realtimeExactlyOnce": true,
+    "healthyAfterLoad": true,
+    "noUnexpectedHttpFailures": true
+  },
+  "persistedOrders": 615,
+  "realtimeEvents": 615,
+  "fixturesRemoved": true
+}

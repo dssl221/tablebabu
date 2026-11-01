@@ -1,0 +1,210 @@
+{
+  "source": "artifacts/resumed-server.log",
+  "scope": "Recorded platform stress fixture restaurant IDs",
+  "transactions": 624,
+  "retriedSuccessfulTransactions": 0,
+  "failedAttempts": 0,
+  "errorCodes": {},
+  "elapsedMs": {
+    "count": 624,
+    "p50": 211.02,
+    "p95": 527.55,
+    "p99": 907.29,
+    "max": 1360.2753000000084
+  },
+  "stagesMs": {
+    "acquisition": {
+      "count": 624,
+      "p50": 118.63,
+      "p95": 424.37,
+      "p99": 466.94,
+      "max": 498.42630000000645
+    },
+    "session-lock": {
+      "count": 624,
+      "p50": 2.66,
+      "p95": 10.02,
+      "p99": 144.56,
+      "max": 210.00800000000163
+    },
+    "restaurant-validation": {
+      "count": 615,
+      "p50": 2.44,
+      "p95": 6.68,
+      "p99": 11.61,
+      "max": 39.23170000000391
+    },
+    "pricing-lookup": {
+      "count": 615,
+      "p50": 9.82,
+      "p95": 18.24,
+      "p99": 25.02,
+      "max": 65.10809999999765
+    },
+    "counter-allocation": {
+      "count": 615,
+      "p50": 28.29,
+      "p95": 171.66,
+      "p99": 425.22,
+      "max": 1239.7212
+    },
+    "order-insertion": {
+      "count": 615,
+      "p50": 3.87,
+      "p95": 7.42,
+      "p99": 11.26,
+      "max": 21.539299999989453
+    },
+    "item-insertion": {
+      "count": 615,
+      "p50": 2.55,
+      "p95": 5.69,
+      "p99": 8.24,
+      "max": 12.063500000003842
+    },
+    "commitRoundTrip": {
+      "count": 624,
+      "p50": 1.92,
+      "p95": 4.38,
+      "p99": 6.74,
+      "max": 41.74089999998978
+    }
+  },
+  "pool": [
+    {
+      "event": "database.pool",
+      "maxConnections": 9
+    }
+  ],
+  "runtime": {
+    "samples": 33,
+    "first": {
+      "event": "runtime.sample",
+      "orderTransactions": {
+        "pendingStarts": 0,
+        "active": 0,
+        "peakPendingStarts": 0
+      },
+      "timestamp": "2026-10-07T12:26:54.709Z",
+      "memory": {
+        "rss": 216940544,
+        "heapTotal": 71278592,
+        "heapUsed": 67177688,
+        "external": 13888896,
+        "arrayBuffers": 6243714
+      },
+      "cpuPercent": 15.072520636070436,
+      "eventLoopP99Ms": 35.684351,
+      "sockets": 0,
+      "connections": [
+        {
+          "state": "active",
+          "waitEventType": null,
+          "count": 1
+        }
+      ]
+    },
+    "last": {
+      "event": "runtime.sample",
+      "orderTransactions": {
+        "pendingStarts": 0,
+        "active": 0,
+        "peakPendingStarts": 49
+      },
+      "timestamp": "2026-10-07T12:29:32.732Z",
+      "memory": {
+        "rss": 230133760,
+        "heapTotal": 68857856,
+        "heapUsed": 65140368,
+        "external": 13887787,
+        "arrayBuffers": 6251906
+      },
+      "cpuPercent": 0.6202122118103931,
+      "eventLoopP99Ms": 33.652735,
+      "sockets": 0,
+      "connections": [
+        {
+          "state": "active",
+          "waitEventType": null,
+          "count": 1
+        },
+        {
+          "state": "idle",
+          "waitEventType": "Client",
+          "count": 9
+        }
+      ]
+    },
+    "rssMiB": {
+      "count": 33,
+      "p50": 219.33,
+      "p95": 388.7,
+      "p99": 388.94,
+      "max": 388.94140625
+    },
+    "heapMiB": {
+      "count": 33,
+      "p50": 64.1,
+      "p95": 123.29,
+      "p99": 123.36,
+      "max": 123.3550796508789
+    },
+    "cpuPercent": {
+      "count": 33,
+      "p50": 0.64,
+      "p95": 160.85,
+      "p99": 190.74,
+      "max": 190.74072636277782
+    },
+    "eventLoopP99Ms": {
+      "count": 33,
+      "p50": 35.29,
+      "p95": 66.26,
+      "p99": 106.43,
+      "max": 106.430463
+    },
+    "activeConnections": {
+      "count": 33,
+      "p50": 1,
+      "p95": 6,
+      "p99": 9,
+      "max": 9
+    },
+    "idleConnections": {
+      "count": 33,
+      "p50": 9,
+      "p95": 9,
+      "p99": 10,
+      "max": 10
+    },
+    "idleInTransactionConnections": {
+      "count": 33,
+      "p50": 0,
+      "p95": 1,
+      "p99": 3,
+      "max": 3
+    },
+    "waitingConnections": {
+      "count": 33,
+      "p50": 0,
+      "p95": 4,
+      "p99": 6,
+      "max": 6
+    },
+    "pendingOrderStarts": {
+      "count": 33,
+      "p50": 0,
+      "p95": 11,
+      "p99": 11,
+      "max": 11
+    },
+    "peakPendingOrderStarts": 49,
+    "sockets": {
+      "count": 33,
+      "p50": 0,
+      "p95": 51,
+      "p99": 51,
+      "max": 51
+    }
+  }
+}
